@@ -1,0 +1,143 @@
+@import "/styles/normalize.css";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--color-button-primary);
+  color: var(--color-heading);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* color palette */
+:root {
+  --color-heading: hsl(0, 0%, 100%);
+  --color-paragraph: hsl(217, 12%, 63%);
+  --color-card-bg: hsl(213, 19%, 18%);
+  --color-bg: hsl(216, 12%, 8%);
+
+  --color-button-primary: hsl(25, 97%, 53%);
+  --color-button-secondary: hsl(213, 16%, 23%);
+}
+
+/* Typography */
+body {
+  background-color: var(--color-bg);
+  display: grid;
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  place-content: center;
+}
+
+p {
+  font-size: 1.4rem;
+  color: var(--color-paragraph);
+  margin: 0;
+}
+
+/* active */
+.rating-block {
+  display: none;
+}
+
+.rated-block {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* card */
+.card {
+  background-color: var(--color-card-bg);
+  border-radius: 20px;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  width: min-content;
+}
+
+.rated-block .card {
+  text-align: center;
+  place-items: center;
+  padding: 3.5rem 2rem !important;
+}
+
+.card__icon {
+  background-color: var(--color-button-secondary);
+  padding: 1.2rem;
+  border-radius: 100%;
+}
+
+.card__heading {
+  color: var(--color-heading);
+  margin: 0;
+  font-size: 2.5rem;
+  width: 290px;
+}
+
+.card__rating-button {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card__rating-button button {
+  aspect-ratio: 1/1;
+  background-color: var(--color-button-secondary);
+  border-radius: 100px;
+  border: 0;
+  color: var(--color-paragraph);
+  font-weight: 700;
+  width: 42px;
+}
+
+.card__rating-button button:hover {
+  background-color: var(--color-paragraph);
+  color: var(--color-heading);
+}
+
+.card__rating-button button.selected {
+  background-color: var(--color-button-primary);
+  color: var(--color-heading);
+}
+
+.card__rated {
+  width: fit-content;
+  color: var(--color-button-primary);
+  background-color: var(--color-button-secondary);
+  padding: 1rem 1rem 0.5rem;
+  border-radius: 100px;
+  font-size: 1.2rem;
+}
+
+button[type="submit"] {
+  background-color: var(--color-button-primary);
+  border-radius: 100px;
+  border: 0;
+  color: var(--color-heading);
+  font-size: 1.3rem;
+  padding: 1.4rem 0 1rem;
+  text-transform: uppercase;
+  width: 290px;
+  font-weight: 700;
+}
+
+button[type="submit"]:hover {
+  color: var(--color-button-primary);
+  background-color: var(--color-heading);
+}
